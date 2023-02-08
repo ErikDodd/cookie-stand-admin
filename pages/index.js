@@ -21,18 +21,18 @@ export default function Home() {
       <header className='flex items-center justify-between p-4 bg-blue-200 text-black'>
         <h1 className='text-xl'>Cookie Stand Admin</h1>
       </header>
-      <main>
-        <h2 className='flex w-3/4 p-2 mx-auto my-4 bg-blue-400 justify-center'> Create Cookie Stand</h2>
-        <form className='flex w-3/4 p-2 mx-auto my-4 bg-blue-400' onSubmit={questionsAskedHandler}>
+      <main className='bg-gray-200'>
+        <h2 className='flex w-3/4 p-2 mx-auto my-4 bg-blue-400 justify-center rounded-lg mb-0'> Create Cookie Stand</h2>
+        <form className='flex w-3/4 p-2 mx-auto my-4 bg-blue-400 rounded-lg mt-0' onSubmit={questionsAskedHandler}>
           <div className='block rounded-lg ' > 
             <div className="block p-3">
               <label className='text-xs'>Location</label>
               <input name='Location' id='input_element' 
               className='flex-auto pl-1 w-700'/>
             </div>
-            <div className=" p-3" id='form_questions'>
+            <div className="p-3" id='form_questions'>
               <div className='input_boxes'>
-                <label className='text-xs justify-center'>Minimum Customers per Hour</label>
+                <label className='text-xs'>Minimum Customers per Hour</label>
                 <input name='Minimum Customers per Hour' className='flex-auto pl-1' />
               </div>
               <div className='input_boxes'>
@@ -49,13 +49,14 @@ export default function Home() {
             </div>
           </div>
         </form>
-    
+        <p className='flex w-3/4 p-2 mx-auto my-4 rounded-lg justify-center'> Report Table Coming Soon...</p>
+        <p className='flex justify-center'> {'{"location": "Barcelona, "minCustomers": 2, "maxCustomers":4, "avgCookies": 2.5}'} </p>
       </main>
       <footer className='p-4 mt-8 bg-blue-200 text-black'>
-        <p className='text-xs'> Erik Dodd 2023</p>
+        <p className='text-xs'> ©2023</p>
 
       </footer>
     </>
   )
 }
-
+// 
