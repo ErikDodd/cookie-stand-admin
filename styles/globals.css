@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+h2 {
+  margin-bottom: 0%;
+}
+
+form {
+  margin-top: 0%;
+}
+
 #input_element {
   width: 860px;
   margin-left: 5px;
