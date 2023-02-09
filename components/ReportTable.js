@@ -56,7 +56,7 @@ export default function ReportTable(props) {
                     <th className='border border-black'>4929</th>
                 </tfoot>
             </table>
-    )   :   (
+       :   (
             <h1>No Cookie Stands Available</h1>
-    );
-}
+    )
+)}
