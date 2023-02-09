@@ -31,7 +31,7 @@ export default function CookieStandAdmin() {
         <>
             <Head />
             <Header />
-            <Main cookieFormHandler={cookieFormHandler} tableHeaders={tableHeaders}/>
+            <Main cookieFormHandler={cookieFormHandler} tableHeaders={tableHeaders} cookieStoreCreateds={cookieStoreCreateds}/>
             <Footer />
         </>
     );
