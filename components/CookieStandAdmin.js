@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { hours } from '../data';
 import { useState } from 'react';
 import Header from '../components/Header';
 import Main from '../components/Main';
@@ -8,7 +7,7 @@ import Footer from '../components/Footer';
 export default function CookieStandAdmin() {
     const [cookieStoreCreateds, setcookieStoreCreateds] = useState([])
     const tableHeaders = ["Locations", "6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "Totals"]
-    // const hourlySales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36]
+
 
     function cookieFormHandler(event) {
         event.preventDefault();
