@@ -1,11 +1,18 @@
 export default function ReportTable(props) {
     return (
-        props.cookieStoreCreateds.length > 0 ?
+        props.cookieStoreCreateds.length > 0 ? 
             <table className="w-1/2 mx-auto my-4">
                 <thead>
                     <tr>
-                    
-                        <th className='border border-black'>Location</th>
+                        {props.tableHeaders.map((location, idx) => props.cookieStoreCreateds.length ? (
+                            <th className='border border-black'key={idx}>{location}</th>
+                            
+                        ) : (
+                                <th className="border border-red-700" key={idx}>
+                                </th>
+                            )
+                        )}
+                        {/* <th className='border border-black'>Location</th>
                         <th className='border border-black'>6am</th>
                         <th className='border border-black'>7am</th>
                         <th className='border border-black'>8am</th>
@@ -20,7 +27,7 @@ export default function ReportTable(props) {
                         <th className='border border-black'>5pm</th>
                         <th className='border border-black'>6pm</th>
                         <th className='border border-black'>7pm</th>
-                        <th className='border border-black'>Totals</th>
+                        <th className='border border-black'>Totals</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -29,13 +36,20 @@ export default function ReportTable(props) {
                             return (
                                 <tr key={cookieStand.location}>
                                     <td className="pl-2 border border-gray-700">{cookieStand.location}</td>
-                                    <td className="pl-2 border border-gray-700">{cookieStand.minCust}</td>
-                                    <td className="pl-2 border border-gray-700">{cookieStand.maxCust}</td>
-                                    <td className="pl-2 border border-gray-700">{cookieStand.avgCookie}</td>
+                                    {
+                                        cookieStand.hourlySales.map(store => <td className="pl-2 border border-gray-700"key={store}>{store}</td>)
+                                    }
+                                    <td className="pl-2 border border-gray-700">{cookieStand.hourlySales.reduce((prev, curr) =>  prev + curr, 0)}</td>
+                    
                                 </tr>
+                                
                             );
                         })
                     }
+                    {/* <tr>
+                         {props.tableHeaders.map((sale, idx) =>
+                        (<td key={sale}>{props.cookieStoreCreateds.reduce((prev, curr) => prev + curr.hourlySales[idx], 0)}</td>))} 
+                    </tr> */}
                 </tbody>
                 <tfoot>
                     <th className='border border-black'>Totals</th>
@@ -57,6 +71,6 @@ export default function ReportTable(props) {
                 </tfoot>
             </table>
        :   (
-            <h1>No Cookie Stands Available</h1>
+            <h1 className="text-center text-2xl">No Cookie Stands Available</h1>
     )
 )}
