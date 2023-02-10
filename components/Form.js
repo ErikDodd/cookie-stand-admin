@@ -1,5 +1,6 @@
 export default function Form(props) {
     return (
+        
         <form className='flex w-3/4 p-2 mx-auto my-4 bg-blue-400 rounded-lg mt-0' onSubmit={props.cookieFormHandler}>
             <div className='block rounded-lg ' >
                 <div className="block p-3">

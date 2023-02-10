@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+header, main, footer {
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
 h2 {
   margin-bottom: 0%;
 }
@@ -20,7 +25,8 @@ form {
   flex-direction: column;
   width: 25%;
   height: 25px;
-  background-color: rgb(122, 211, 241);
+  background-color: rgb(198, 226, 235);
+  
 }
 
 

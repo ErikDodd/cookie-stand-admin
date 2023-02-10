@@ -31,6 +31,8 @@ Describe any tests that you did not complete, skipped, etc
 
 A special thank you to Tammy Do. Tammy helped me get situated with the useState and helped me set up functionality and debug a bit. Thanks Tammy!
 
+A special thank you to Brandon Mizutani. I was having trouble rendering the table. Brandon helped me get this sorted.
+
 
 
 
