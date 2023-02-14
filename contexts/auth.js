@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import jwt from 'jsonwebtoken';
 
-const baseURL = process.env.NEXT_PUBLIC_APU_URL;
+const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token';
 
 const AuthContext = createContext();
@@ -23,12 +23,14 @@ export function AuthProvider(props) {
     });
 
     async function login(username, password) {
+        // console.log(username, password)
         const options = {
             method: "POST",
             body: JSON.stringify({username, password}),
             headers: {'Content-Type': 'application/json'},
         };
         
+        // console.log(options)
         const response = await fetch(tokenUrl, options);
 
         const data = await response.json();
